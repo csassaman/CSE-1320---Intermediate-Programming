@@ -27,6 +27,10 @@
 FILE *fopen(const char *path, const char *mode);
 ```
 
+```c++
+FILE *fopen(const char *path, const char *mode);
+```
+
 - Files are opened in C through the use of `fopen`, which is included in `stdio.h`
 - There are several modes which dictates how the file is opened:
   - `"r"` - read only. Does not override the file
