@@ -2,10 +2,10 @@
 
 ## Aggregate Data Types
 
-- Aggregate data types are designed to store multiple valies
-- We have been using arrays, which is an instance of an aggregate datatype
-- Aggregate date types are not necessarily restricted to multiple valies of a single type
-- C structs permit the storage of multiple data types within one entity
+- Aggregate data types are designed to store multiple values
+- Arrays are an instance of an aggregate datatype
+- Aggregate data types are not necessarily restricted to multiple values of a single type
+- C structs permits the storage of multiple data types within one entity
 
 ## Structs
 
