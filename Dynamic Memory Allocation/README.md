@@ -1,7 +1,7 @@
 # Dynamic Memory Allocation
 
 - C gives the programmer the tools to allocate memory dynamically through several functions in `stdlib.h`
-- Dynamic memory allocation is a powerful too which alows our programs to adapt to varying inputs, but it comes with increased development overhead
+- Dynamic memory allocation is a powerful tool which allows our programs to adapt to varying inputs, but it comes with increased development overhead
 - Functions realated to dynamic memory allocation
   - `malloc`
   - `calloc`
@@ -14,12 +14,11 @@
 void * malloc(size_t size)
 ```
 
-- Allocated size byted and returns a pointer to the allocated memory. Memory is __not__ initialized
-- Function returns _* pointer_ to memory allocated
+- Allocated `size` bytes and returns a pointer to the allocated memory. Memory is __not__ initialized
+- Function returns _* pointer_ to allocated memory
 - If the system cannot allocate memory, `NULL` is returned
   - `NULL` is also returned if `size` is zero
 - If you call `malloc` again for one pointer, you lose the pointer to the memory that was allocated, and you cannot free it later
-- returns `NULL` if memory cannot be assigned (check after using)
 - [malloc example](malloc_example.c)
 - [memory leak](memory_leak.c)
 
@@ -31,6 +30,7 @@ void * calloc(int nmemb, size_t size);
 
 - Allocates memory for an _array_ of `nmemb` elements of `size` bytes each and returns a pointer to the memory
 - initializes data to zeroes
+  - Cannot initialize data to anything other than zero since the function does not know the underlying datatype and bit structure
 
 ## `realloc`
 
@@ -38,7 +38,7 @@ void * calloc(int nmemb, size_t size);
 void * realloc(void *ptr, size_t size);
 ```
 
-- Changes the size of the memory block points to by `ptr` to size btytes. If `ptr` is `NULL`  then the call is eq to `malloc`
+- Changes the size of the memory block pointed to by `*ptr` to size btytes. If `ptr` is `NULL`  then the call is eq to `malloc`
 - If the new size is bigger than the previous size, the new data is __not__ initialized
 
 ## `free`
@@ -47,16 +47,16 @@ void * realloc(void *ptr, size_t size);
 
 ## Heap vs Stack
 
-- The stack has several important props
-  - linear data structure
-  - high speed across
-  - memory is not fragmented
+- The __stack__ has several important properties
+  - Linear data structure
+  - High speed access
+  - Memory is not fragmented
   - Memory cannot be resized
 
-- The heap differs from the stack in the following ways
-  - Memory is resizebale using realloc
-  - memory can be gragmented
-  - developer is responsible for managing memory
+- The __heap__ differs from the stack in the following ways
+  - Memory is resizebale using `realloc`
+  - Memory can be fragmented
+  - Developer is responsible for managing memory
 
 ## Void pointer
 

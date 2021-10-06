@@ -34,7 +34,7 @@
 |1|0|1|
 |1|1|1|
 
-- True if _either_ inputs are true
+- True if _either_ input is true
 
 ## Bitwise XOR
 
@@ -51,7 +51,7 @@
 
 - A left shift (moving every bit to the left once) will double the previous value for each number of shifts.
   - so, 10 << 2 = 10 * 2 * 2 = 40
-  - Bits will not loop around, so once you shift the most significant to the left, that bit is lost
+  - Bits will not loop around, so once you shift the most significant bit to the left, that bit is lost
 - A right shift will half the number, trunkating any decimal that would otherwise have existed.
   - 10 >> 1 = 10 / 2 = 5
   - 10 >> 2 = (10 / 2) / 2 = 2.5 => 2
@@ -82,4 +82,4 @@
 - Used to isolate a certain value or range of values of a group or bits
 - Usually applied with the AND operator
   - `11001010 & 00001111 = 00001010`
-  - By applying the mask `00001111`, you can isolate the last for bits of the first binary value
+  - By applying the mask `00001111`, you can isolate the last four bits of the first binary value

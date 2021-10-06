@@ -12,8 +12,8 @@
 
 ## Files in C
 
-- Stream of bytes
-- _It is up to the programmer_ to put any sort of rules and organization on how the date in each files is represented (e.g. CSV, JSON, etc.)
+- A file is represented as a stream of bytes
+- _It is up to the programmer_ to put any sort of rules and organization on how the date in each file is represented (e.g. CSV, JSON, etc.)
 - C __always__ opens three files when a program is run
     1. `stdin`
     2. `stdout`
@@ -23,10 +23,12 @@
 
 ## Opening a File
 
+```c
+FILE *fopen(const char *path, const char *mode);
+```
+
 - Files are opened in C through the use of `fopen`, which is included in `stdio.h`
-    ```c++
-    FILE *f = fopen("data.txt", "r");
-    ```
+- There are several modes which dictates how the file is opened:
   - `"r"` - read only. Does not override the file
   - `"w"` - Open a new file for writing. Will override if file exists
   - `"a"` - Open a file for appending (can be used if file already exists). Puts file pointer at end of file
