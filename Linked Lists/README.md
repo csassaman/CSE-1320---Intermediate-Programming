@@ -32,3 +32,26 @@
     a->next = b->next;
     free(b);
     ```
+
+## Efficiency Analysis
+
+### Indexing
+
+- An array member can be acessed in constant time
+- For a linked list, the node must be found by cycling through the list. In the worst case, it will take as many cycles as there are nodes
+- Slower than accessing it directly
+
+### Insert/Delete at Beginning
+
+- Constant time operation
+- Since the first node is always know, this can be done in constant time by simply removing the head
+
+### Inserting/deleting at the End
+
+- Still only a single operation for linked lists, but the list must still be traversed to find the end
+
+### Memory Considerations
+
+- In its most basic form, each node of a linked list requires space for the struct node which includes whatever datatype the value is. For example, using 8 byte address, a node which contains a single character requires 9 bytes
+- A similar array would requere 9 times less memory
+

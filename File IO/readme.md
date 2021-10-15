@@ -23,10 +23,6 @@
 
 ## Opening a File
 
-```c
-FILE *fopen(const char *path, const char *mode);
-```
-
 ```c++
 FILE *fopen(const char *path, const char *mode);
 ```
@@ -44,7 +40,7 @@ FILE *fopen(const char *path, const char *mode);
 ## Closing a File
 
 ```c++
-fclose(f);
+int fclose(FILE *fp);
 ```
 
 - ___Alwauys close files after working on them___

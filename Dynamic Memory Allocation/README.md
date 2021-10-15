@@ -43,6 +43,9 @@ void * realloc(void *ptr, size_t size);
 
 ## `free`
 
+```c++
+void free(void *ptr);
+
 - Frees the memory space pointed to by `ptr` which must have been returned by a previoud calls to `malloc`, `calloc`, or `realloc`
 
 ## Heap vs Stack
