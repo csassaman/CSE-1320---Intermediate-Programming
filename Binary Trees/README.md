@@ -39,6 +39,7 @@
     1. Depth First Search (Preorder)
         - To preform a preorder DFS, the _key_ of the current node is printed _before_ moving to the sub-nodes
     2. Depth First Search (Inorder)
+        - To preform an inorder DFS, the _key_ of the current node is printed _between_ the sub-nodes 
     3. Depth First Search (Postorder)
     4. Breadth First Search
 
