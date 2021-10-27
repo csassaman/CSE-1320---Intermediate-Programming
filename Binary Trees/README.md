@@ -25,4 +25,21 @@
 
 - Defined by the following property:
   > If _x_ is a node in a binary search tree and _y_ is a sub-node of _x_, then _y_ is a _left sub-node_ if _y.key_ <= _x.key_ and _y_ is a _right sub-node_ if _y.key_ >= _x.key_
-- 
+
+## Operations
+
+1. [Traversal](###traversal)
+2. Search
+3. Inseration
+4. Deletion
+
+### Traversal
+
+- Several different ways to traverse the nodes of a binary tree
+    1. Depth First Search (Preorder)
+        - To preform a preorder DFS, the _key_ of the current node is printed _before_ moving to the sub-nodes
+    2. Depth First Search (Inorder)
+    3. Depth First Search (Postorder)
+    4. Breadth First Search
+
+
