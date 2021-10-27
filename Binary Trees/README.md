@@ -28,7 +28,7 @@
 
 ## Operations
 
-1. [Traversal](###traversal)
+1. [Traversal](#L36)
 2. Search
 3. Inseration
 4. Deletion
@@ -40,7 +40,9 @@
         - To preform a preorder DFS, the _key_ of the current node is printed _before_ moving to the sub-nodes
     2. Depth First Search (Inorder)
         - To preform an inorder DFS, the _key_ of the current node is printed _between_ the sub-nodes 
+        - Can swap order (smallest to largest or largest to smallest) by swapping recursive function calls
     3. Depth First Search (Postorder)
+        - Prints key last
     4. Breadth First Search
 
 
