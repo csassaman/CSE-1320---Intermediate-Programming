@@ -23,5 +23,6 @@
 
 ## Binary Search Tree
 
-- Defined by the following property
-  - If _x_ is a node in a binary search tree and _y_ is a sub-node of _x_, then _y_ is a _left sub-node_ if _y.key_ <= _x.key_ and y is a _right sub-node_ if _y.key_ >= _x.key_
+- Defined by the following property:
+  > If _x_ is a node in a binary search tree and _y_ is a sub-node of _x_, then _y_ is a _left sub-node_ if _y.key_ <= _x.key_ and _y_ is a _right sub-node_ if _y.key_ >= _x.key_
+- 
