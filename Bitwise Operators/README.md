@@ -5,45 +5,45 @@
 - C provides the following bitwise operators. All but the NOT operator are binary
 - __C does not allow bitwise operations for `float` and `double`__ 
 
-|__Symbol__|__Description__|
-|----------|-------------|
-|`&`|bitwise AND|
-|`\|`|bitwise OR|
-|`^`|bitwise XOR|
-|`<<`|left shift|
-|`>>`|right shift|
-|`~`|bitwise NOT|
+| __Symbol__ | __Description__ |
+| ---------- | --------------- |
+| `&`        | bitwise AND     |
+| `\|`       | bitwise OR      |
+| `^`        | bitwise XOR     |
+| `<<`       | left shift      |
+| `>>`       | right shift     |
+| `~`        | bitwise NOT     |
 
 ## Bitwise AND
 
-|__a__|__b__|__a & b__|
-|----------|-------------|---------|
-|0|0|0|
-|0|1|0|
-|1|0|0|
-|1|1|1|
+| __a__ | __b__ | __a & b__ |
+| ----- | ----- | --------- |
+| 0     | 0     | 0         |
+| 0     | 1     | 0         |
+| 1     | 0     | 0         |
+| 1     | 1     | 1         |
 
 - True if _both_ inputs are true
 
 ## Bitwise OR 
 
-|__a__|__b__|__a \|\| b__|
-|----------|-------------|---------|
-|0|0|0|
-|0|1|1|
-|1|0|1|
-|1|1|1|
+| __a__ | __b__ | __a \|\| b__ |
+| ----- | ----- | ------------ |
+| 0     | 0     | 0            |
+| 0     | 1     | 1            |
+| 1     | 0     | 1            |
+| 1     | 1     | 1            |
 
 - True if _either_ input is true
 
 ## Bitwise XOR
 
-|__a__|__b__|__a ^ b__|
-|----------|-------------|---------|
-|0|0|0|
-|0|1|1|
-|1|0|1|
-|1|1|0|
+| __a__ | __b__ | __a ^ b__ |
+| ----- | ----- | --------- |
+| 0     | 0     | 0         |
+| 0     | 1     | 1         |
+| 1     | 0     | 1         |
+| 1     | 1     | 0         |
 
 - True if one of the inputs are true, but not both
 

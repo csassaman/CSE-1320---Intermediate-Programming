@@ -13,7 +13,7 @@
     };
     ```
 - node in linked lists can be moved and rearranged by changing the pointers
-- __Have a reference to the data before you change it 
+- __Have a reference to the data before you change it__
 
 ## Inserting
 
@@ -54,4 +54,3 @@
 
 - In its most basic form, each node of a linked list requires space for the struct node which includes whatever datatype the value is. For example, using 8 byte address, a node which contains a single character requires 9 bytes
 - A similar array would requere 9 times less memory
-
