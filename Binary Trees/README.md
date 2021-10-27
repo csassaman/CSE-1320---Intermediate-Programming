@@ -29,8 +29,8 @@
 ## Operations
 
 1. [Traversal](###traversal)
-2. Search
-3. Inseration
+2. [Search](###search)
+3. Insertion(###insertion)
 4. Deletion
 
 ### Traversal
@@ -42,7 +42,18 @@
         - To preform an inorder DFS, the _key_ of the current node is printed _between_ the sub-nodes 
         - Can swap order (smallest to largest or largest to smallest) by swapping recursive function calls
     3. Depth First Search (Postorder)
-        - Prints key last
+        - The _key_ of the current node is printed _after_ moving to the sub-nodes
     4. Breadth First Search
+        - Prints each level of the tree in order from top to bottom, left to right
+        - The breadth of the layer is edxplored before moving to the next level in the height of the tree
 
+### Search
 
+- Searching a Binary Search Tree involves looking at each node, statrting with the root, until the desired _key_ is found
+- If the target value is less than the _key_, the left sub-node is traversed. Otherwise, the right sub-node is traversed
+- This continues until a leaf node is reached
+
+### Insertion
+
+- Besides searching, inserting a node into a BST is one fo the greatet benefits of using them
+- A new node is inserted depending on its *key* relative to the tree _T_
