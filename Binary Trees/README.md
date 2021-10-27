@@ -28,7 +28,7 @@
 
 ## Operations
 
-1. [Traversal](README.md?plain=1#L36)
+1. [Traversal](###traversal)
 2. Search
 3. Inseration
 4. Deletion
