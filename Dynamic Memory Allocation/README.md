@@ -45,6 +45,7 @@ void * realloc(void *ptr, size_t size);
 
 ```c++
 void free(void *ptr);
+```
 
 - Frees the memory space pointed to by `ptr` which must have been returned by a previoud calls to `malloc`, `calloc`, or `realloc`
 
@@ -89,4 +90,5 @@ void free(void *ptr);
 - If your program runs like this:
     - `program arg1`
 - You run it using Valgrind like this:
-    - `valgrind --leak-check=yes program arg1`
+    - `valgrind --leak-check=full program arg1`
+    - `--show-leak-kinds=all`

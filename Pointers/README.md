@@ -203,16 +203,29 @@ int **c = &b;
 int (*fn_ptr)(int a); // pointer to function that returns int
 ```
 
-- Parentheses are to indicate we are talking about a function pointer
-- Removing the deregerence operator leaves a pointer to a function that returns an `int`  and accepts an `int` as input
+- Parentheses are to indicate that the identifier is bound to the dereference operator before the argument list
+- Removing the dereference operator leaves a pointer to a function that returns an `int`  and accepts an `int` as input
+- This is analogous to thge following:
+    ```c++
+    int *ptr
+    ```
+- `*ptr` will return an `int`. Removing the dreference operator returns an address
 - [function_pointer.c](function_pointer.c)
+
+Another Example:
+
+```c++
+int (*fn (char c)) (int a, int b);
+```
+
+- `fn` is a function that takes one string and returns a pointer to a function that accepts two `int` values and returns an `int` 
 - [operator_ptr_return.c](operator_ptr_return.c)
 
 ### `qsort`
 
 ```c++
 void qsort(void *base, size_t num, size_t width,
-           int (*compar)(const void *, const void *));
+           int (*compare)(const void *elem1, const void *elem2));
 ```
 
 - `qsort` is a function from the standard C library which implements the quick sort algorithm
@@ -222,13 +235,30 @@ void qsort(void *base, size_t num, size_t width,
   - `width` - The byte suze of each element
 - The fourth argument is a function pointer which is used to compare two elements in the array. this will be defined depending on the application
 - The input type for this comparison function is `void *` so that it can handle any data type
-- The comparison functio nmust return an integer less than, equal to, or greater than zero if the first argument is considered to be respectively less than, equal to ,m or greater than the second
+- The comparison function must return an integer less than, equal to, or greater than zero if the first argument is considered to be respectively less than, equal to, or greater than the second
 - If two members are equal, their relative order is undefined
+- [qsort example](qsort_basic.c)
+
+### `qsort` and `struct`s
+
+- It is also useful to sort complex elements such as an array of `struct`s depending on some member value
+- This requires that the elements of the comparison function be cast to the desired `struct` *and* member
+- [qsort example using structs](qsort_struct.c)
 
 ## Command Line Arguments
 
+```c++
+#include <stdio.h>
+
+int main(int argc, char **argv) {
+    // Do something
+
+    return 0;
+}
+```
+
 - Programs can be more general by accepting parameters from the command line
 - `main()` function accepts two formal argumenets
-  - `int argc` as the number of arguments
+  - `int argc` as the number of arguments passed via `stdin`, including the name of the application
   - `char **argv` stores each individual command line argument, where an argument is separated by a space
-- 
+

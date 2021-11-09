@@ -23,7 +23,7 @@ targets: dependencies
     ...
     commandn
 ```
-- dependencies - what libraries, files are needed 
-- commands are shell commands
-- useful target can be to clean the project
+- `dependencies` - what libraries, files are needed 
+- `commands` are shell commands
+- useful `target` can be to clean the project
 - Makefile name needs to be "Makefile"
