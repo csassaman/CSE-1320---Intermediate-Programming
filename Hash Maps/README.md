@@ -1,10 +1,11 @@
 # Hash Maps
 
-- A hash map is an abstract unordered associative array
-- It represents a mapping between a key and a value
+- A __hash map__ is an __abstract unordered associative array__ representing a mapping between a __key__ and a __value__
+  - __Unordered__ - meaning the data is represented in no particular ordering
+  - An __associative array__ is an array considering of key-value pairs for which each key is unique (e.g. IDs, Addressing, etc.)
 - A key in a hash map need not be a numerical value
-- IT can be any variable sequence of characters
-- A hash function converts the sequence of characters to a numerical which is used to store the data
+- It can be any variable sequence of characters
+- A __hash function__ converts the sequence of characters to a numerical value which is used to determine the index
 - __keys__ - the input before the hash function
 - __buckets__ - where the hashed data is stored
 
@@ -33,8 +34,8 @@
 
 ### Seperate Chaining
 
-[Wiki Image](seperate_chaining.png)
-[Seperate Chaining - Linked List Example](hash_map_ll.c)
+- [Wiki Image](seperate_chaining.png)
+- [Seperate Chaining - Linked List Example](hash_map_ll.c)
 
 - Solutions based on __seperate chaining__ use an additional data structure for each entry in the aray, such as a linked list
   - Many different data structure choices, but usually determined based on memory and compute time
