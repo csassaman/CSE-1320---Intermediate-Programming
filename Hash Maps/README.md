@@ -81,6 +81,10 @@
 
 ### Rehashing
 
+- Rehashing is required when the aray is resized
+- The naive approach is to simply create a new array (usually fouble the size of the original) and copy all entried from the original array
+- The issue with this method is that if the size of the array is large it can be very costly to write a table
+
 #### All-At-Once Rehashing
 
 - Rehashing the entire hash map
@@ -88,7 +92,11 @@
 
 #### Incremental Rehashing
 
-- Alternative to creating a new array each time it needs to be rehashed 
+- Alternative to creating a new array each time it needs to be rehashed is to resize __incrementally__
 - First, create a _new array_
-- Original  map should stay in memory and any new insertions should occur in the new array
+- Original map should stay in memory and any new insertions should occur in the new array
 - When an insertion occurs, move _r_ elements from the original array to the new one
+- If the new array is (r + 1)/r times larger than the original, this will ensure the old array is completly copied before the new array needs to be resized
+- During a search or deletion, each array is checked for the entry
+- This must happen until all entries from the original have been mnoved over
+- Once the original array is empty, it can be released
