@@ -100,3 +100,5 @@
 - During a search or deletion, each array is checked for the entry
 - This must happen until all entries from the original have been mnoved over
 - Once the original array is empty, it can be released
+
+### [Hash Map Example](hash_map_linear.c)
