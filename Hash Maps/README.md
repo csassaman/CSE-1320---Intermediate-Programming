@@ -32,10 +32,9 @@
   - __Seperate Chaining__
   - __Open Addressing__
 
-### Seperate Chaining
+### [Seperate Chaining](seperate_chaining.png)
 
-- [Wiki Image](seperate_chaining.png)
-- [Seperate Chaining - Linked List Example](hash_map_ll.c)
+
 
 - Solutions based on __seperate chaining__ use an additional data structure for each entry in the aray, such as a linked list
   - Many different data structure choices, but usually determined based on memory and compute time
@@ -44,6 +43,7 @@
 #### Linked List
 
 - If the data that is being stored is small, a linked list might not be a good choice as the overhead of the next pointer will add up
+- [Seperate Chaining - Linked List Example](hash_map_ll.c)
 
 #### Binary Search Tree
 
@@ -53,8 +53,8 @@
 #### Arrays
 
 - Searching between multiple elements in the same bucket is linear with arrays
--  When items are added or removed, the array needs to be resized
--  This requires moving elements in the case of removing an item
+- When items are added or removed, the array needs to be resized
+- This requires moving elements in the case of removing an item
 
 ### Open Addressing
 
